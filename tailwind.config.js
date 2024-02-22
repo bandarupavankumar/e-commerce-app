@@ -18,6 +18,18 @@ module.exports = {
       xl: '1440px',
     },
     extend: {
+      keyframes: {
+        bounceSlow: {
+          '0%, 100%': { transform: 'translateY(-25%)', animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)' },
+          '50%': { transform: 'translateY(0)',  },
+        },
+      },
+      animation: {
+        bounceSlow: 'bounceSlow 3s forwards',
+      },
+      transitionTimingFunction: {
+        'cubic-slow': 'cubic-bezier(0.8, 0, 0.2, 1)',
+      },
       colors: {
         primary: '#222222',
         secondary: '#F5E6E0',

@@ -1,25 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-import Home from "./pages/Home";
-import ProductDetails from "./pages/ProductDetails";
-
-import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Map from "./components/Map";
+import MyMarquee from "./components/MyMarquee";
+import Product from "./components/Product";
+
 
 const App = () => {
   return (
-    <div className="overflow-hidden">
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/product/:id" element={<ProductDetails />}></Route>
-        </Routes>
-        <Sidebar />
-        <Footer />
-      </Router>
+    <div className="">
+      <MyMarquee/>
+      <Header/>
+      <Product/>
+      <Map/>
+      <Footer/>
     </div>
   );
 };
